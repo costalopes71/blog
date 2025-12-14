@@ -3,8 +3,11 @@ import { defineConfig } from 'astro/config';
 
 import preact from "@astrojs/preact";
 
+import sentry from "@sentry/astro";
+import spotlightjs from "@spotlightjs/astro";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://costalopes.netlify.app/blog/",
-  integrations: [preact()]
+  integrations: [preact(), ...(import.meta.env.DEV ? [sentry() , spotlightjs()] : [])],
 });

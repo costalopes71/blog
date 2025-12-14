@@ -13,5 +13,10 @@
     "@astrojs/rss": "^4.0.14",
     "astro": "^5.16.0",
     "preact": "^10.27.2"
+  }, 
+  "devDependencies": {
+    "@sentry/astro": "^10.30.0",
+    "@spotlightjs/astro": "^3.2.6",
+    "@types/node": "^25.0.0"
   }
 }
